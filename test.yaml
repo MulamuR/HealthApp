@@ -1,0 +1,24 @@
+# flow.yaml
+
+appId: za.co.discovery.health
+---
+- launchApp
+- extendedWaitUntil:
+    visible: "Log in" # or any other selector
+    timeout: 270000      # Timeout in milliseconds
+- longPressOn:
+    point: 50%,9%
+- tapOn: "Test"
+- extendedWaitUntil:
+    visible: "Log in"
+    timeout: 5000
+- tapOn: "Log in"
+- tapOn:
+    text: "Username"
+- inputText: "1000030435"
+- hideKeyboard
+- tapOn:
+    text: "Password"
+- inputText: "password1"
+- hideKeyboard
+- tapOn: "Log in"
